@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>60 de Socorro · Confirme sua presença</title>
+  <meta name="description" content="Confirme sua presença na festa surpresa de 60 anos de Socorro — sábado, 21 de novembro, às 17h.">
+  <meta property="og:title" content="60 de Socorro · Confirme sua presença">
+  <meta property="og:description" content="Sábado, 21 de novembro, às 17h. É surpresa!">
+  <meta property="og:image" content="img/convite.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <img class="convite" src="img/convite.jpg" alt="Convite: Vamos celebrar e relembrar os 60 de Socorro. Sábado, 21 de novembro, às 17h, na residência de Socorro. Será surpresa!">
+
+    <section class="card" id="rsvp">
+      <h1>Confirme sua presença</h1>
+      <p class="sub">Sábado, 21 de novembro · às 17h</p>
+      <div class="divisor"><span>♡</span></div>
+
+      <form id="form" novalidate>
+        <label>
+          Seu nome
+          <input name="nome" type="text" autocomplete="name" required placeholder="Nome e sobrenome">
+        </label>
+
+        <fieldset>
+          <legend>Você vai?</legend>
+          <div class="opcoes">
+            <label class="opcao"><input type="radio" name="presenca" value="Sim" required><span>Sim, estarei lá!</span></label>
+            <label class="opcao"><input type="radio" name="presenca" value="Não"><span>Não poderei ir</span></label>
+          </div>
+        </fieldset>
+
+        <label id="campo-pessoas">
+          Quantas pessoas no total (contando você)?
+          <select name="pessoas">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option>
+          </select>
+        </label>
+
+        <label>
+          Recado para Socorro <small>(opcional)</small>
+          <textarea name="mensagem" rows="3" placeholder="Deixe um carinho…"></textarea>
+        </label>
+
+        <button type="submit">Confirmar</button>
+        <p class="erro" id="erro" role="alert"></p>
+      </form>
+
+      <div class="obrigado" id="obrigado" hidden>
+        <p class="script" id="obrigado-titulo">Obrigado!</p>
+        <p id="obrigado-texto"></p>
+      </div>
+
+      <p class="lembrete"><span class="script">Psiu…</span> é surpresa! Não conte para a aniversariante.</p>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
